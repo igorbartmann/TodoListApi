@@ -405,6 +405,22 @@ server.ssl.key-alias=springboot
 keystore.p12
 ```
 
+## HOW TO CONFIGURE SQL SERVER
+
+By default, SQL Server does not support TCP/IP, so Java SQL Server Driver can not sucessfully connect to the database server.
+
+To configure it, you can follow the steps below:
+1. Open SQL Server Configuration Manager.
+- In Windows, search by `SQLServerManager16.msc` depending on SQL Server version.
+2. Enable TCP/IP: 
+- Go to SQL Server Network Configuration > Protocols for MSSQLSERVER (or your instance name). Right-click TCP/IP and choose Enable.
+3. Set the Port: 
+- Right-click TCP/IP again, select Properties, and go to the IP Addresses tab. Scroll down to `IPAll` and verify that TCP Port is set to 1433.
+4. Enable SQL Authentication: 
+- Open SQL Server Management Studio (SSMS), right-click your Server Instance > Properties > Security, and select SQL Server and Windows Authentication mode.
+5. Restart Server: 
+- Restart the SQL Server service from your Windows Services panel to apply changes.
+
 ## HOW TO RUN THE APPLICATION
 To run the application, you need to be in an executable file, as TodoListApiApplication.java
 
