@@ -407,7 +407,7 @@ keystore.p12
 
 ## HOW TO CONFIGURE SQL SERVER
 
-By default, SQL Server does not support TCP/IP, so Java SQL Server Driver can not sucessfully connect to the database server.
+By default, SQL Server does not support TCP/IP, so Java SQL Server Driver can not successfully connect to the database server.
 
 To configure it, you can follow the steps below:
 1. Open SQL Server Configuration Manager.
